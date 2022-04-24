@@ -6,7 +6,7 @@ export class Weapon extends Item {
   private _damageModifier: number = 0
   private _durabilityModifier: number = 0
 
-  protected static MODIFIER_CHANGE_RATE: number = 0.25
+  public static MODIFIER_CHANGE_RATE: number = 0.25
 
   constructor(name, baseDamage, baseDurability, value, weight) {
     super(name, value, weight)
@@ -15,35 +15,35 @@ export class Weapon extends Item {
     this._baseDurability = baseDurability
   }
 
-  protected get baseDamage(): number {
+  public get baseDamage(): number {
     return this._baseDamage
   }
 
-  protected set baseDamage(value: number) {
+  public set baseDamage(value: number) {
     this._baseDamage = value
   }
 
-  protected get baseDurability(): number {
+  public get baseDurability(): number {
     return this._baseDurability
   }
 
-  protected set baseDurability(value: number) {
+  public set baseDurability(value: number) {
     this._baseDurability = value
   }
 
-  protected get damageModifier(): number {
+  public get damageModifier(): number {
     return this._damageModifier
   }
 
-  protected get durabilityModifier(): number {
+  public get durabilityModifier(): number {
     return this._durabilityModifier
   }
 
-  protected set durabilityModifier(value: number) {
+  public set durabilityModifier(value: number) {
     this._durabilityModifier = value
   }
 
-  protected set damageModifier(value: number) {
+  public set damageModifier(value: number) {
     this._damageModifier = value
   }
 
