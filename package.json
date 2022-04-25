@@ -1,0 +1,32 @@
+{
+  "name": "hometask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect",
+    "build": "rimraf ./build && tsc",
+    "lint": "prettier --config .prettierrc 'src/**/*.ts' --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haodangthi/mentoring.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haodangthi/mentoring/issues"
+  },
+  "homepage": "https://github.com/haodangthi/mentoring#readme",
+  "devDependencies": {
+    "@types/node": "^15.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "ts-node-register": "^1.0.0",
+    "typescript": "^4.2.4"
+  }
+}
