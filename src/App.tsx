@@ -17,8 +17,6 @@ import { getUniqueArray } from './helpers/get-unique-array'
 import { FilterModel } from './types/filter.model'
 
 const initialFilterState: FilterModel = {
-    [FilterType.asc]: false,
-    [FilterType.desc]: false,
     [FilterType.withoutPosts]: false,
     [FilterType.moreThanPosts]: false,
 }
