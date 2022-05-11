@@ -2,7 +2,7 @@ import { FilterType } from '../enum/filter-type.enum'
 import { RowItem } from '../types/types'
 import { FilterModel } from '../types/filter.model'
 
-export const filterData = (filter: FilterModel, users: RowItem[]) => {
+export const filterData = (filter: FilterModel, users: RowItem[]): RowItem[] => {
     return users.filter((user) => {
         return (
             (filter[FilterType.withoutPosts] && !user.posts) ||

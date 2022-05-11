@@ -28,7 +28,7 @@ function App() {
     const [searchedUsers, setSearchedUsers] = useState<RowItem[]>([])
     const [shownUsers, setShownUsers] = useState<RowItem[]>([])
 
-    const handleFilterChange = (filterName: FilterType) => {
+    const handleFilterChange = (filterName: FilterType): void => {
         const currFilter = {
             ...filter,
             [filterName]: !filter[filterName],
@@ -41,13 +41,13 @@ function App() {
         setShownUsers(getUniqueArray([...searchedUsers, ...users]))
     }
 
-    const handleSortChange = (filterName: FilterType) => {
+    const handleSortChange = (filterName: FilterType): void => {
         const users = shownUsers || data
 
         setShownUsers([...sortData(filterName, users)])
     }
 
-    const handleSearch = (searchQuery: string) => {
+    const handleSearch = (searchQuery: string): void => {
         const users = searchData(searchQuery, data)
 
         setSearchedUsers(users)

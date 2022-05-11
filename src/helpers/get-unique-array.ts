@@ -1,3 +1,3 @@
-export const getUniqueArray = (array: any[]) => {
+export const getUniqueArray = (array: any[]): any[] => {
     return [...new Set(array)]
 }
