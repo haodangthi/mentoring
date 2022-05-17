@@ -13,7 +13,7 @@ export class Client {
         id++
     }
 
-    public get weight() {
+    public get weight(): number {
         return this._weight
     }
 

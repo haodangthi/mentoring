@@ -30,7 +30,7 @@ export class Shipper {
         return new Oversize()
     }
 
-    getInstance() {
+    getInstance(): Client {
         return this.client
     }
 
