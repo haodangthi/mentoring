@@ -1,18 +1,14 @@
-import { Client } from './Client/Client'
-import { Shipment } from './Shipment/Shipment'
-import { FragileShipment } from './Shipment/decorator/FragileShipment'
-import { DoNotLeaveShipment } from './Shipment/decorator/DoNotTouchShipment'
-import { ReturnReceiptShipment } from './Shipment/decorator/ReturnReceiptShipment'
+import { insert } from './priority-queue/insert'
+import { remove } from './priority-queue/remove'
 
-const client = new Client('Mockingbird Lane, Tulsa, OK', '4th Ave SE, Bellevue, Wa', '12021', '97721', 16)
+const heap = []
 
-const shipment = new Shipment(client)
+const queue = [12, 8, 4, 35, 45, 20] // random array of numbers
 
-const fragile = new FragileShipment(shipment)
-const doNotLeaveShipment = new DoNotLeaveShipment(shipment)
-const returnReceiptShipment = new ReturnReceiptShipment(shipment)
+queue.forEach((e) => insert(heap, e)) // create a heap
 
-console.log(shipment.ship())
-console.log(fragile.shipItself())
-console.log(doNotLeaveShipment.shipItself())
-console.log(returnReceiptShipment.shipItself())
+console.log(heap)
+
+;[...heap].forEach((e) => {
+    console.log(remove(heap)) // remove elements with a highest priority
+})
