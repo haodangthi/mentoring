@@ -1,6 +1,6 @@
 import { bubbleDown } from './bubble-down'
 
-export const remove = (heap: any[]) => {
+export const remove = (heap: number[]) => {
     const first = heap.shift()
     const last = heap.pop()
 

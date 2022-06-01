@@ -4,6 +4,7 @@
     "module": "commonjs",
     "strict": true,
     "strictPropertyInitialization": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "strictNullChecks": false
   }
 }

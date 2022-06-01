@@ -1,6 +1,6 @@
 import { getLeftIndex, getRightIndex } from './helpers'
 
-export const bubbleDown = (heap: any[], parentIndex: number, parent: number): void => {
+export const bubbleDown = (heap: number[], parentIndex: number, parent: number): void => {
     const left = getLeftIndex(parentIndex)
     const right = getRightIndex(parentIndex)
     let childToSwap
